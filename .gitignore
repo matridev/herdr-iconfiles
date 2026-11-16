@@ -1,0 +1,5 @@
+node_modules/
+*.tgz
+# written by the Herdr app into installed mods
+mods/*/gpui-kit.d.ts
+mods/*/jsconfig.json

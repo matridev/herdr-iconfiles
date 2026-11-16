@@ -1,0 +1,45 @@
+id = "matridev.iconfiles"
+name = "File Icons"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "VS Code-style file and folder icons (Material Icon Theme) in the Herdr app's Files panel"
+platforms = ["linux", "macos", "windows"]
+
+# Installing or updating the plugin copies the `file-icons` mod into the Herdr
+# desktop app (~/.config/herdr-app, or the Windows one under WSL), adds the
+# "main-file-icons" layout and switches the open window to it.
+[[build]]
+command = ["sh", "scripts/install.sh", "install"]
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/install.ps1", "install"]
+platforms = ["windows"]
+
+[[actions]]
+id = "install"
+title = "File icons: install or repair"
+contexts = ["workspace"]
+command = ["sh", "scripts/install.sh", "install"]
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "install-windows"
+title = "File icons: install or repair"
+contexts = ["workspace"]
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/install.ps1", "install"]
+platforms = ["windows"]
+
+[[actions]]
+id = "uninstall"
+title = "File icons: remove from the Herdr app"
+contexts = ["workspace"]
+command = ["sh", "scripts/install.sh", "uninstall"]
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "uninstall-windows"
+title = "File icons: remove from the Herdr app"
+contexts = ["workspace"]
+command = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "scripts/install.ps1", "uninstall"]
+platforms = ["windows"]

@@ -1,0 +1,12 @@
+herdr-iconfiles
+Copyright 2026 matridev
+
+mods/file-icons/main.js is derived from the `files` mod shipped with the
+Herdr desktop app (https://herdr.dev), licensed under the Apache License 2.0.
+Changes: file and folder rows show Material Icon Theme icons.
+
+mods/file-icons/icons/ and mods/file-icons/icon-map.js come from
+Material Icon Theme (https://github.com/material-extensions/vscode-material-icon-theme),
+MIT License, Copyright (c) 2025 Material Extensions. See mods/file-icons/icons/LICENSE.
+
+mods/file-icons/chevron-*.svg are Lucide icons (ISC License, https://lucide.dev).
